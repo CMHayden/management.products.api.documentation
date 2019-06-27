@@ -48,47 +48,19 @@
                             <li> <a href="#intro" class=active> <span class=api-request-title>Overview</span> <span class="muted small light nav-center-url ellipsis"> What are APIs </span> </a> </li>
                             <li> <a href="#api_endpoint_and_ssl" class=""> <span class=api-request-title>API Endpoints and SSL</span> <span class="muted small light nav-center-url ellipsis"> API endpoints are mapped to your account domain: </span> </a> </li>
                             <li> <a href="#authentication" class=""> <span class=api-request-title>Authentication</span> <span class="muted small light nav-center-url ellipsis"> How does it work? Who can access my helpdesk? Can everybody see my data? </span> </a> </li>
-                            <li> <a href="#ordering" class=""> <span class=api-request-title>Ordering</span> </a> </li>
-                            <li> <a href="#filtering" class=""> <span class=api-request-title>Filtering</span> </a> </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#department" class="">Departments</a>
-                        <ul class="nav-links " id=department-panel>
-                            <li> <a href="#department_attributes" class=active> <span class=api-request-title>Departments</span> </a> </li>
-                            <li> <a href="#view_department_list" class=""> <i class="label label-small label-get">get</i> <span class=api-request-title>View Departments List</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#categories" class="">Categories</a>
-                        <ul class="nav-links " id=categories-panel>
-                            <li> <a href="#categories_attributes" class=active> <span class=api-request-title>Categories</span> </a> </li>
-                            <li> <a href="#view_categories_list" class=""> <i class="label label-small label-get">get</i> <span class=api-request-title>View Categories List</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#product" class="">Products</a>
                         <ul class="nav-links " id=product-panel>
                             <li> <a href="#product_attributes" class=active> <span class=api-request-title>Product</span> </a> </li>
-                            <li> <a href="#view_products_list" class=""> <i class="label label-small label-get">get</i> <span class=api-request-title>View Products List</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
-                            <li> <a href="#view_product" class=""> <i class="label label-small label-get">get</i> <span class=api-request-title>View Product</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#customer" class="">Customers</a>
-                        <ul class="nav-links " id=customer-panel>
-                            <li> <a href="#customer_attributes" class=active> <span class=api-request-title>Customer</span> </a> </li>
-                            <li> <a href="#view_customer_list" class=""> <i class="label label-small label-get">get</i> <span class=api-request-title>View Customer List</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
-                            <li> <a href="#view_customer" class=""> <i class="label label-small label-get">get</i> <span class=api-request-title>View Customer</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
-                            <li> <a href="#create_customer" class=""> <i class="label label-small label-post">post</i> <span class=api-request-title>Create Customer</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
+                            <li> <a href="#add_product" class=""> <i class="label label-small label-post">post</i> <span class=api-request-title>Add New Product</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
                         </ul>
                     </li>
                     <li>
                         <a href="#order" class="">Orders</a>
                         <ul class="nav-links " id=customer-panel>
                             <li> <a href="#order_attributes" class=active> <span class=api-request-title>Order</span> </a> </li>
-                            <li> <a href="#view_order_list" class=""> <i class="label label-small label-get">get</i> <span class=api-request-title>View Order List</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
-                            <li> <a href="#view_order" class=""> <i class="label label-small label-get">get</i> <span class=api-request-title>View Order</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
                             <li> <a href="#create_order" class=""> <i class="label label-small label-post">post</i> <span class=api-request-title>Create Order</span> <span class="muted small light nav-center-url ellipsis"> /itil/departments/[id].json </span> </a> </li>
                         </ul>
                     </li>
@@ -104,17 +76,16 @@
                                     <h2>Overview</h2>
                                     <div id=api-overview>
                                         <h3 class=api-overview-heading>Products Management API</h3>
-                                        <p class=api-info-text> This API belong to the <b>Representational State Transfer (REST)</b> category. This allows you to perform "RESTful" operations like read, modify, add or delete data.</p>
+                                        <p class=api-info-text> This API belongs to the <b>Representational State Transfer (REST)</b> category. This allows you to perform "RESTful" operations like read, modify, add or delete data.</p>
                                         <h3 class=api-overview-heading>What can I do with the Products Management API?</h3>
                                         <p class=api-info-text> With the APIs, you can
-                                        <h6 class="api-overview-heading small-head">Read</h6>
+                                        <h6 class="api-overview-heading small-head">Post</h6>
                                         <ol class=list-styled>
-                                            <li>Browse through products, departments, categories, transactions</li>
-                                            <li>Apply Filters and get only the data that you want</li>
+                                            <li>Send notifications about orders or products</li>
                                         </ol>
-                                        <h6 class="api-overview-heading small-head">Write</h6>
+                                        <h6 class="api-overview-heading small-head">Subscribe</h6>
                                         <ol class=list-styled>
-                                            <li>Create new transactions</li>
+                                            <li>Add subscribers to your organisations topic</li>
                                         </ol>
                                         </p>
                                     </div>
@@ -183,366 +154,9 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div id=ordering class=scroll-spy>
-                                <div class=api-content-main>
-                                    <h2>Ordering</h2>
-                                    <div id=api-authentication>
-                                        <h3 class=api-overview-heading>On all the collection results, you can specify ordering which should be applied</h3>
-
-                                        <p class=api-info-text> See sample below, product list ordered ascending by db_change_stamp</p>
-                                        <div class=api-url>
-                                            <i class="label label-get label-large">get</i></span>
-                                            <h6> /products?order_by=db_change_stamp:asc </h6>
-                                        </div>
-                                        <p class=api-info-text> You can sort result set by multiple columns</p>
-                                        <div class=api-url>
-                                            <i class="label label-get label-large">get</i></span>
-                                            <h6> /products?order_by=price:desc,item_code:asc </h6>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id=filtering class=scroll-spy>
-                                <div class=api-content-main>
-                                    <h2>Filtering</h2>
-                                    <div id=api-filtering>
-                                        <h3 class=api-overview-heading>On all the collection results, you can specify filters which should be applied</h3>
-
-                                        <p class=api-info-text> Find products with db_change_stamp = 7743</p>
-                                        <div class=api-url>
-                                            <i class="label label-get label-large">get</i></span>
-                                            <h6> /products?db_change_stamp=7743 </h6>
-                                        </div>
-
-                                        <p class=api-info-text> Find products with db_change_stamp > 7743 </p>
-                                        <div class=api-url>
-                                            <i class="label label-get label-large">get</i></span>
-                                            <h6> /products?min:db_change_stamp=7743 </h6>
-                                        </div>
-
-                                        <p class=api-info-text> Find products with db_change_stamp < 7743</p>
-                                        <div class=api-url>
-                                            <i class="label label-get label-large">get</i></span>
-                                            <h6> /products?max:db_change_stamp=7743 </h6>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
 
                         <!-- ------------------------------------ Introduction Section END ------------------------------------ -->
-
-
-
-                                <!-- ------------------------------------ Department Section Start ------------------------------------ -->
-
-                                <div id=department class=scroll-spy-parent>
-
-                                    <div id=department_attributes class=scroll-spy>
-                                        <div class=api-content-main>
-                                            <h2>Departments</h2>
-                                            <p class=api-info-text>Departments helps you categorize products. With this API you can create, update and view departments in your company</p>
-
-                                            <table class="table table-bordered api-attributes-table">
-                                                <thead>
-                                                <tr>
-                                                    <th>Attribute</th>
-                                                    <th>Type</th>
-                                                    <th>Description</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>db_change_stamp</td>
-                                                    <td>number</td>
-                                                    <td>Every change in DB increases this value, you can use it as last update Timestamp <i class="label label-info label-small">Read-Only</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>id</td>
-                                                    <td>number</td>
-                                                    <td>ID specific to department <i class="label label-info label-small">Read-Only</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>name</td>
-                                                    <td>string</td>
-                                                    <td>Department name<i class="label label-info label-small">mandatory</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>code</td>
-                                                    <td>string</td>
-                                                    <td>Short Department code<i class="label label-info label-small">unique</i><i class="label label-info label-small">mandatory</i></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-
-                                    <div id=view_department_list class=scroll-spy>
-                                        <div class=api-content-main>
-                                            <h2>View a Department List</h2>
-                                            <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                                            <p> This API helps you to view Department. </p>
-                                            <div class=api-url>
-                                                <i class="label label-get label-large">get</i> <span class=icon-globe></span>
-                                                <h6> /departments </h6>
-                                            </div>
-                                            <div class=api-code-container>
-                                                <h6> Response </h6>
-                                                <div class="api-code-content expand-response-content">
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-json">{
-    "current_page": 1,
-    "data": [
-        {
-            "db_change_stamp": 1610,
-            "id": 1,
-            "name": "Infant",
-            "code": "100"
-        },
-        {
-            "db_change_stamp": 1611,
-            "id": 2,
-            "name": "Action",
-            "code": "200"
-        },
-        {
-            "db_change_stamp": 1612,
-            "id": 3,
-            "name": "Dolls",
-            "code": "300"
-        },
-        {
-            "db_change_stamp": 1625,
-            "id": 4,
-            "name": "Sporting Goods",
-            "code": "400"
-        },
-        {
-            "db_change_stamp": 1627,
-            "id": 5,
-            "name": "Remote Control",
-            "code": "500"
-        },
-        {
-            "db_change_stamp": 1649,
-            "id": 6,
-            "name": "Misc",
-            "code": "900"
-        }
-        ],
-    "from": 1,
-    "last_page": 1,
-    "next_page_url": null,
-    "path": "https://demo.products.management/api/departments",
-    "per_page": 10,
-    "prev_page_url": null,
-    "to": 6,
-    "total": 6
-    }
-    </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="api-code-container api-sample api-code-curl">
-                                                <h6> Sample code | Curl </h6>
-                                                <div class=api-code-content>
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X GET https://username@demo.com:password@demo.api.products.management/api/departments?per_page=10&OrderBy=db_change_stamp:ASC&Mindb_change_stamp=1000
-    </pre>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- ------------------------------------ EXTRA ABOVE THIS LINE ------------------------------------ -->
-
-                                </div>
-
-                                <!-- ------------------------------------ Department Section END ------------------------------------ -->
-
-
-                                <!-- ------------------------------------ Categories Section Start ------------------------------------ -->
-
-                                <div id=categories class=scroll-spy-parent>
-
-                                    <div id=categories_attributes class=scroll-spy>
-                                        <div class=api-content-main>
-                                            <h2>Categories</h2>
-                                            <p class=api-info-text>Categories helps you categorize products. With this API you can view Categories in your company</p>
-
-                                            <table class="table table-bordered api-attributes-table">
-                                                <thead>
-                                                <tr>
-                                                    <th>Attribute</th>
-                                                    <th>Type</th>
-                                                    <th>Description</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>db_change_stamp</td>
-                                                    <td>number</td>
-                                                    <td>Every change in DB increases this value, you can use it as last update Timestamp <i class="label label-info label-small">Read-Only</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>id</td>
-                                                    <td>number</td>
-                                                    <td>ID specific to department <i class="label label-info label-small">Read-Only</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>department_id</td>
-                                                    <td>number</td>
-                                                    <td>ID specific to department, each category needs to be assigned to department <i class="label label-info label-small">mandatory</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>name</td>
-                                                    <td>string</td>
-                                                    <td>Category name<i class="label label-info label-small">mandatory</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>code</td>
-                                                    <td>string</td>
-                                                    <td>Short Category code<i class="label label-info label-small">unique</i><i class="label label-info label-small">mandatory</i></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-
-                                    <div id=view_categories_list class=scroll-spy>
-                                        <div class=api-content-main>
-                                            <h2>View a Categories List</h2>
-                                            <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                                            <p> This API helps you to view Categories. </p>
-                                            <div class=api-url>
-                                                <i class="label label-get label-large">get</i> <span class=icon-globe></span>
-                                                <h6> /categories </h6>
-                                            </div>
-                                            <div class=api-code-container>
-                                                <h6> Response </h6>
-                                                <div class="api-code-content expand-response-content">
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-json">{
-    "current_page": 1,
-    "data": [
-        {
-            "db_change_stamp": 1615,
-            "id": 1,
-            "department_id": 5,
-            "code": "TR",
-            "name": "Train"
-        },
-        {
-            "db_change_stamp": 1616,
-            "id": 2,
-            "department_id": 1,
-            "code": "DV",
-            "name": "Development"
-        },
-        {
-            "db_change_stamp": 1618,
-            "id": 3,
-            "department_id": 1,
-            "code": "CL",
-            "name": "Clothing"
-        },
-        {
-            "db_change_stamp": 1619,
-            "id": 4,
-            "department_id": 2,
-            "code": "RS",
-            "name": "Rescue"
-        },
-        {
-            "db_change_stamp": 1621,
-            "id": 6,
-            "department_id": 3,
-            "code": "BA",
-            "name": "Baby"
-        },
-        {
-            "db_change_stamp": 1623,
-            "id": 8,
-            "department_id": 4,
-            "code": "SP",
-            "name": "Sports"
-        },
-        {
-            "db_change_stamp": 1626,
-            "id": 9,
-            "department_id": 5,
-            "code": "AR",
-            "name": "Airplane"
-        },
-        {
-            "db_change_stamp": 1631,
-            "id": 7,
-            "department_id": 4,
-            "code": "BY",
-            "name": "Bicycle"
-        },
-        {
-            "db_change_stamp": 1650,
-            "id": 10,
-            "department_id": 6,
-            "code": "GC",
-            "name": "Gift Cards"
-        },
-        {
-            "db_change_stamp": 2625,
-            "id": 5,
-            "department_id": 2,
-            "code": "HR",
-            "name": "Heroes"
-        }
-    ],
-    "from": 1,
-    "last_page": 1,
-    "next_page_url": null,
-    "path": "https://demo.products.management/api/categories",
-    "per_page": 10,
-    "prev_page_url": null,
-    "to": 10,
-    "total": 10
-    }
-    </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="api-code-container api-sample api-code-curl">
-                                                <h6> Sample code | Curl </h6>
-                                                <div class=api-code-content>
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X GET https://demo@products.management:password@demo.api.products.management/api/categories?per_page=10&OrderBy=db_change_stamp:ASC&Mindb_change_stamp=1000
-    </pre>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- ------------------------------------ EXTRA ABOVE THIS LINE ------------------------------------ -->
-
-                                </div>
-
-                                <!-- ------------------------------------ Categories Section END ------------------------------------ -->
 
                                 <!-- ------------------------------------ Product Section Start ------------------------------------ -->
 
@@ -551,7 +165,7 @@
                                     <div id=product_attributes class=scroll-spy>
                                         <div class=api-content-main>
                                             <h2>Product</h2>
-                                            <p class=api-info-text>With this API you can create, update and view products in your company</p>
+                                            <p class=api-info-text>With this API you can send notifications to subscribers on products</p>
 
                                             <table class="table table-bordered api-attributes-table">
                                                 <thead>
@@ -563,263 +177,43 @@
                                                 </thead>
                                                 <tbody>
                                                 <tr>
-                                                    <td>db_change_stamp</td>
+                                                    <td>sku</td>
                                                     <td>number</td>
-                                                    <td>Every change in DB increases this value, you can use it as last update Timestamp <i class="label label-info label-small">Read-Only</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>id</td>
-                                                    <td>number</td>
-                                                    <td>ID specific to product <i class="label label-info label-small">Read-Only</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>item_code</td>
-                                                    <td>string(25)</td>
-                                                    <td>Short product code<i class="label label-info label-small">unique</i><i class="label label-info label-small">mandatory</i></td>
+                                                    <td>ID corresponding to the product/td>
                                                 </tr>
                                                 <tr>
                                                     <td>description</td>
-                                                    <td>string(30)</td>
-                                                    <td>Short product description <i class="label label-info label-small">mandatory</i></td>
+                                                    <td>text</td>
+                                                    <td>Text which describes the product</td>
                                                 </tr>
                                                 <tr>
                                                     <td>price</td>
                                                     <td>number</td>
-                                                    <td>Full Retail Price</td>
+                                                    <td>Price per unit of the product</i></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>price_a</td>
-                                                    <td>number</td>
-                                                    <td>Retail PriceA - can be used to provide different pricing for ie Web</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>price_b</td>
-                                                    <td>number</td>
-                                                    <td>Retail Price B - can be used to provide different pricing for ie Web</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>price_c</td>
-                                                    <td>number</td>
-                                                    <td>Retail Price C - can be used to provide different pricing for ie Web</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>quantity_on_hand</td>
-                                                    <td>number</td>
-                                                    <td>Product current stock level</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>quantity_committed</td>
-                                                    <td>number</td>
-                                                    <td>Quantity reserved for current orders \ layaways etc.</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>quantity_available</td>
-                                                    <td>number</td>
-                                                    <td>Quantity currently available to sell <br>
-                                                        <b>QuantityAvailable</b> = QuantityOnHand - QuantityCommitted</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>department_id</td>
-                                                    <td>number</td>
-                                                    <td>ID of department which product belongs to<i class="label label-info label-small">Mandatory</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>category_id</td>
-                                                    <td>number</td>
-                                                    <td>ID of category which product belongs to<i class="label label-info label-small">Mandatory</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>quantity_on_order</td>
-                                                    <td>number</td>
-                                                    <td>Quantity placed on supplier orders (Purchase Orders) - this will be going into stock when received</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>active</td>
-                                                    <td>boolean</td>
-                                                    <td>Describes if product is currently active</td>
-                                                </tr>
+
                                                 </tbody>
                                             </table>
 
                                         </div>
                                     </div>
 
-                                    <div id=view_products_list class=scroll-spy>
+                                    <div id=add_product class=scroll-spy>
                                         <div class=api-content-main>
-                                            <h2>View a Products List</h2>
+                                            <h2>Add a New Product</h2>
                                             <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                                            <p> This API helps you to view Products. </p>
+                                            <p> This API helps you to add a new Product. </p>
                                             <div class=api-url>
-                                                <i class="label label-get label-large">get</i> <span class=icon-globe></span>
-                                                <h6> /products </h6>
+                                                <i class="label label-post label-large">post</i> <span class=icon-globe></span>
+                                                <h6> /api/products </h6>
                                             </div>
                                             <div class=api-code-container>
                                                 <h6> Response </h6>
                                                 <div class="api-code-content expand-response-content">
                                                     <div class=code-wrapper>
                                                                         <pre class="highlight prettyprint linenums lang-json">{
-    "current_page": 1,
-    "data": [
-        {
-            "id": 6,
-            "db_change_stamp": 4199,
-            "item_id": 6,
-            "item_code": "25032",
-            "description": "Infant Walker",
-            "price": 15.99,
-            "quantity_on_hand": 5,
-            "quantity_committed": 0,
-            "quantity_available": 5,
-            "department_id": 1,
-            "category_id": 2,
-            "quantity_on_order": 12,
-            "active": 1
-        },
-        {
-            "id": 5,
-            "db_change_stamp": 5100,
-            "item_id": 5,
-            "item_code": "GC",
-            "description": "Gift Card",
-            "price": 0,
-            "quantity_on_hand": 97,
-            "quantity_committed": 0,
-            "quantity_available": 97,
-            "department_id": 6,
-            "category_id": 0,
-            "quantity_on_order": 0,
-            "active": 1
-        },
-        {
-            "id": 2,
-            "db_change_stamp": 6874,
-            "item_id": 2,
-            "item_code": "11212",
-            "description": "R/C Train",
-            "price": 94.99,
-            "quantity_on_hand": 33,
-            "quantity_committed": 0,
-            "quantity_available": 33,
-            "department_id": 5,
-            "category_id": 1,
-            "quantity_on_order": 12,
-            "active": 1
-        },
-        {
-            "id": 4,
-            "db_change_stamp": 6879,
-            "item_id": 4,
-            "item_code": "15100",
-            "description": "Football",
-            "price": 9.99,
-            "quantity_on_hand": 17,
-            "quantity_committed": 0,
-            "quantity_available": 17,
-            "department_id": 4,
-            "category_id": 8,
-            "quantity_on_order": 6,
-            "active": 1
-        },
-        {
-            "id": 44,
-            "db_change_stamp": 7438,
-            "item_id": 44,
-            "item_code": "15002",
-            "description": "Girl's 15\" Bike",
-            "price": 79.99,
-            "quantity_on_hand": 4,
-            "quantity_committed": 0,
-            "quantity_available": 4,
-            "department_id": 4,
-            "category_id": 7,
-            "quantity_on_order": 36,
-            "active": 1
-        },
-        {
-            "id": 1,
-            "db_change_stamp": 7743,
-            "item_id": 1,
-            "item_code": "11200",
-            "description": "R/C Glider",
-            "price": 149.99,
-            "quantity_on_hand": 39,
-            "quantity_committed": 4,
-            "quantity_available": 35,
-            "department_id": 5,
-            "category_id": 9,
-            "quantity_on_order": 12,
-            "active": 1
-        },
-        {
-            "id": 48,
-            "db_change_stamp": 7751,
-            "item_id": 48,
-            "item_code": "15110",
-            "description": "Basketball",
-            "price": 9.99,
-            "quantity_on_hand": 17,
-            "quantity_committed": 0,
-            "quantity_available": 17,
-            "department_id": 4,
-            "category_id": 8,
-            "quantity_on_order": 6,
-            "active": 1
-        },
-        {
-            "id": 49,
-            "db_change_stamp": 7756,
-            "item_id": 49,
-            "item_code": "15120",
-            "description": "Soccer ball",
-            "price": 9.99,
-            "quantity_on_hand": 8,
-            "quantity_committed": 0,
-            "quantity_available": 8,
-            "department_id": 4,
-            "category_id": 8,
-            "quantity_on_order": 18,
-            "active": 1
-        },
-        {
-            "id": 45,
-            "db_change_stamp": 7842,
-            "item_id": 45,
-            "item_code": "30020",
-            "description": "Small Baby Doll",
-            "price": 5.99,
-            "quantity_on_hand": 81,
-            "quantity_committed": 0,
-            "quantity_available": 81,
-            "department_id": 3,
-            "category_id": 6,
-            "quantity_on_order": 6,
-            "active": 1
-        },
-        {
-            "id": 47,
-            "db_change_stamp": 7867,
-            "item_id": 47,
-            "item_code": "40010",
-            "description": "Lolly Doll",
-            "price": 5,
-            "quantity_on_hand": 2,
-            "quantity_committed": 0,
-            "quantity_available": 2,
-            "department_id": 3,
-            "category_id": 6,
-            "quantity_on_order": 0,
-            "active": 1
-        }
-    ],
-    "from": 1,
-    "last_page": 5,
-    "next_page_url": "https://demo.products.management/api/products?per_page=10&page=2",
-    "path": "https://demo.products.management/api/products",
-    "per_page": 10,
-    "prev_page_url": null,
-    "to": 10,
-    "total": 49
-    }
+    "ok"
+}
     </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
                                                     </div>
                                                 </div>
@@ -829,58 +223,15 @@
                                                 <div class=api-code-content>
                                                     <div class=code-wrapper>
                                                                         <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X GET https://username@demo.com:password@demo.api.products.management/api/products?per_page=5&OrderBy=db_change_stamp:ASC&Mindb_change_stamp=1000
-    </pre>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div id=view_product class=scroll-spy>
-                                        <div class=api-content-main>
-                                            <h2>View a Product</h2>
-                                            <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                                            <p> This API helps you to view product. </p>
-                                            <div class=api-url>
-                                                <i class="label label-get label-large">get</i> <span class=icon-globe></span>
-                                                <h6> /products/[id]</h6>
-                                            </div>
-                                            <div class=api-code-container>
-                                                <h6> Response </h6>
-                                                <div class="api-code-content expand-response-content">
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-json">{
-        "db_change_stamp": 4199,
-        "id": 6,
-        "item_id": 6,
-        "department_id": 1,
-        "category_id": 2,
-        "supplier_id": 4,
-        "item_code": "25032",
-        "description": "Infant Walker",
-        "price": 15.99,
-        "price_a": 14.99,
-        "price_b": 0,
-        "price_c": 0,
-        "quantity_on_hand": 5,
-        "quantity_committed": 0,
-        "quantity_available": 5,
-        "active": 1
-    }
-    </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="api-code-container api-sample api-code-curl">
-                                                <h6> Sample code | Curl </h6>
-                                                <div class=api-code-content>
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X GET https://demo.api.products.management/api/products/6
+curl -X POST \
+https://api.products.management.coding.cab/api/products \
+-H 'Accept: application/json' \
+-H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI0NDcxOWU4ZmI2ZGEwZjY3OTA2MzUwOTFlMzNhYTYzYTUxNjY3ZjQ2MjYwN2E2NmUyNTQ4MjU3YjhjMTA0MDEwMDc2NDk3OGJjNTdiZTczIn0.eyJhdWQiOiI0IiwianRpIjoiMjQ0NzE5ZThmYjZkYTBmNjc5MDYzNTA5MWUzM2FhNjNhNTE2NjdmNDYyNjA3YTY2ZTI1NDgyNTdiOGMxMDQwMTAwNzY0OTc4YmM1N2JlNzMiLCJpYXQiOjE1NjEwMjA1MDAsIm5iZiI6MTU2MTAyMDUwMCwiZXhwIjoxNTkyNjQyOTAwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.vDAkKTusAsUMkYh3eQUuZs0FBA58gL2Y8pKxAZ_vVhEbD-h_zQX3YXRKC-DzsgRiP_dn7gb8ykaxbWqc3L2vd9R8EPu3lNZx4fWtrq3_LdDbwzFuED1CqZOoAsCjUBQNdJP5Wt7RAdnyzT9LV3wYF5AMzi321VZFA5Jh08DdE4fVk555JnNt5kwhbb5SRKm3PA5KooZPswWDxuTjGUnmY1_AEqjGFbcAZ-W75bJaFFEkVMOrQMxs4yhd3qdlFlWuAGVeosY4h1Vf_Wx9wkSnQM6i8hisiEpldBFmx63FMarxX7w09hVyGVZ0zaBFY0ZQEu8bMFm6h9ZG75vPLipDNTXiv0n8JeV0fZUMJ4LWHshcmEheErLW0tGFqDVYVGvU5QGqgMdBb80N-BeQ95MR-pNJTIPQ2zm06jvAsW6eZ-6rcAXp-6lzt943hMPIFGaBeQ3HiQttxJ-J5M6WdizQr76jJgHnO7CeL-T5mbfuJE2goGnW1WaMSM11aDRmzI3ylpnilweCXSNnn3EOJDQWK38_JFQaXyj8UM5eA7sTRxYdC0hzpUkmykBFh0fqSLW0JidC8PElpRgZX41nVAMy7yacn9WjQH7LxQE-csMrF5hJzinpig4IMraOyS6EltWUaSMGyzN0-asMn86MHhOnLWtyf3ocSK9AluemjufA-yA' \
+-d '{
+    "sku": "123456",
+    "description": "Blue bag",
+    "price": 78
+}'
     </pre>
                                                     </div>
                                                 </div>
@@ -896,358 +247,16 @@
                                 <!-- ------------------------------------ Product Section END ------------------------------------ -->
 
 
-                                <!-- ------------------------------------ Customer Section Start ------------------------------------ -->
-
-                                <div id=customer class=scroll-spy-parent>
-
-                                    <div id=customer_attributes class=scroll-spy>
-                                        <div class=api-content-main>
-                                            <h2>Customer</h2>
-                                            <p class=api-info-text>With this API you can create, update and view your customers</p>
-
-                                            <table class="table table-bordered api-attributes-table">
-                                                <thead>
-                                                <tr>
-                                                    <th>Attribute</th>
-                                                    <th>Type</th>
-                                                    <th>Description</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>db_change_stamp</td>
-                                                    <td>number</td>
-                                                    <td>Every change in DB increases this value, you can use it as last update Timestamp <i class="label label-info label-small">Read-Only</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>id</td>
-                                                    <td>number</td>
-                                                    <td>ID specific to customer <i class="label label-info label-small">Read-Only</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>account_number</td>
-                                                    <td>string</td>
-                                                    <td>Customer unique account number<i class="label label-info label-small">unique</i></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>title</td>
-                                                    <td>string</td>
-                                                    <td>Customer title (Mr \ Ms etc)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>first_name</td>
-                                                    <td>string</td>
-                                                    <td>Customers first name</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>last_name</td>
-                                                    <td>string</td>
-                                                    <td>Customers last name</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>company</td>
-                                                    <td>string</td>
-                                                    <td>Customers company name</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>address</td>
-                                                    <td>string</td>
-                                                    <td>First line of address</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>address2</td>
-                                                    <td>string</td>
-                                                    <td>Second line of address</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>city</td>
-                                                    <td>string</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>state</td>
-                                                    <td>string</td>
-                                                    <td>State \ County</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>zip</td>
-                                                    <td>string</td>
-                                                    <td>Zip \ Post code</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>phone_number</td>
-                                                    <td>string</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>fax_number</td>
-                                                    <td>string</td>
-                                                    <td></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>email_address</td>
-                                                    <td>string</td>
-                                                    <td></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-                                    </div>
-
-                                    <div id=view_customer_list class=scroll-spy>
-                                        <div class=api-content-main>
-                                            <h2>View a Customer List</h2>
-                                            <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                                            <p> This API helps you to view Customers. </p>
-                                            <div class=api-url>
-                                                <i class="label label-get label-large">get</i> <span class=icon-globe></span>
-                                                <h6> /customers </h6>
-                                            </div>
-                                            <div class=api-code-container>
-                                                <h6> Response </h6>
-                                                <div class="api-code-content expand-response-content">
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-json">{
-    "current_page": 1,
-    "data": [
-        {
-            "db_change_stamp": 7581,
-            "id": 3,
-            "account_number": "0000003",
-            "title": "Mr.",
-            "first_name": "David",
-            "last_name": "Simpson",
-            "company": " ",
-            "address": "923 10th Street West",
-            "address2": " ",
-            "city": "Kirkland",
-            "state": "WA",
-            "zip": "89923",
-            "country": " ",
-            "phone_number": "(425) 555-1022",
-            "fax_number": " ",
-            "email_address": " "
-        },
-        {
-            "db_change_stamp": 193335,
-            "id": 2,
-            "account_number": "0000002",
-            "title": "Ms.",
-            "first_name": "Diane",
-            "last_name": "Tibbot",
-            "company": " ",
-            "address": "8283 West Cout",
-            "address2": " ",
-            "city": "Renton",
-            "state": "WA",
-            "zip": "93838",
-            "country": " ",
-            "phone_number": "(425) 555-0192",
-            "fax_number": " ",
-            "email_address": " "
-        },
-        {
-            "db_change_stamp": 193369,
-            "id": 1,
-            "account_number": "0000001",
-            "title": "Mr.",
-            "first_name": "Gregory",
-            "last_name": "Weber",
-            "company": " ",
-            "address": "9392 Ninth Ave.",
-            "address2": " ",
-            "city": "Redmond",
-            "state": "WA",
-            "zip": "93893",
-            "country": " ",
-            "phone_number": "(425) 555-0129",
-            "fax_number": " ",
-            "email_address": " "
-        },
-        {
-            "db_change_stamp": 505316,
-            "id": 4,
-            "account_number": "0000004",
-            "title": " ",
-            "first_name": " ",
-            "last_name": "New Customer",
-            "company": " ",
-            "address": " ",
-            "address2": " ",
-            "city": " ",
-            "state": " ",
-            "zip": " ",
-            "country": " ",
-            "phone_number": " ",
-            "fax_number": " ",
-            "email_address": " "
-        },
-        {
-            "db_change_stamp": 505319,
-            "id": 5,
-            "account_number": "0000005",
-            "title": " ",
-            "first_name": " ",
-            "last_name": "New Customer",
-            "company": " ",
-            "address": " ",
-            "address2": " ",
-            "city": " ",
-            "state": " ",
-            "zip": " ",
-            "country": " ",
-            "phone_number": " ",
-            "fax_number": " ",
-            "email_address": " "
-        }
-        ],
-    "from": 1,
-    "last_page": 18,
-    "next_page_url": "https://demo.products.management/api/customers?per_page=5&page=2",
-    "path": "https://demo.products.management/api/customers",
-    "per_page": 5,
-    "prev_page_url": null,
-    "to": 5,
-    "total": 88
-    }
-    </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="api-code-container api-sample api-code-curl">
-                                                <h6> Sample code | Curl </h6>
-                                                <div class=api-code-content>
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X GET https://demo.api.products.management/api/customers?per_page=5&order_by=db_change_stamp:ASC
-    </pre>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div id=view_customer class=scroll-spy>
-                                        <div class=api-content-main>
-                                            <h2>View a Customer</h2>
-                                            <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                                            <p> This API helps you to view customer. </p>
-                                            <div class=api-url>
-                                                <i class="label label-get label-large">get</i> <span class=icon-globe></span>
-                                                <h6> /customers/[id]</h6>
-                                            </div>
-                                            <div class=api-code-container>
-                                                <h6> Response </h6>
-                                                <div class="api-code-content expand-response-content">
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-json">{
-        "db_change_stamp": 7581,
-        "id": 3,
-        "account_number": "0000003",
-        "title": "Mr.",
-        "first_name": "David",
-        "last_name": "Simpson",
-        "company": " ",
-        "address": "923 10th Street West",
-        "address2": " ",
-        "city": "Kirkland",
-        "state": "WA",
-        "zip": "89923",
-        "country": " ",
-        "phone_number": "(425) 555-1022",
-        "fax_number": " ",
-        "email_address": " "
-    }
-    </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="api-code-container api-sample api-code-curl">
-                                                <h6> Sample code | Curl </h6>
-                                                <div class=api-code-content>
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X GET https://demo.api.products.management/api/customers/3
-    </pre>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div id=create_customer class=scroll-spy>
-                                        <div class=api-content-main>
-                                            <h2>Create new Customer</h2>
-                                            <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                                            <p> This API helps you to create new customer. </p>
-                                            <div class=api-url>
-                                                <i class="label label-post label-large">post</i> <span class=icon-globe></span>
-                                                <h6> /customers</h6>
-                                            </div>
-                                            <div class=api-code-container>
-                                                <h6> Response </h6>
-                                                <div class="api-code-content expand-response-content">
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-json">{
-        "db_change_stamp": 9987,
-        "id": 12,
-        "account_number": "0000051",
-        "title": "",
-        "first_name": "David",
-        "last_name": "Simpson",
-        "company": " ",
-        "address": "",
-        "address2": " ",
-        "city": "",
-        "state": "",
-        "zip": "",
-        "country": " ",
-        "phone_number": "",
-        "fax_number": " ",
-        "email_address": " "
-    }
-    </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="api-code-container api-sample api-code-curl">
-                                                <h6> Sample code | Curl </h6>
-                                                <div class=api-code-content>
-                                                    <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X POST -d '{"first_name": "David","last_name":"Simpson"}' https://demo.api.products.management/api/customers
-    </pre>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- ------------------------------------ EXTRA ABOVE THIS LINE ------------------------------------ -->
-
-                                </div>
-
-                                <!-- ------------------------------------ Customer Section END ------------------------------------ -->
 
 
 
-
-
-
-
-                        <!-- ------------------------------------ Customer Section Start ------------------------------------ -->
+                        <!-- ------------------------------------ Order Section Start ------------------------------------ -->
 
 
                             <div id=order_attributes class=scroll-spy>
                                 <div class=api-content-main>
                                     <h2>Order</h2>
-                                    <p class=api-info-text>With this API you can create, update and view your orders</p>
+                                    <p class=api-info-text>With this API you can send notifications about orders</p>
 
                                     <table class="table table-bordered api-attributes-table">
                                         <thead>
@@ -1259,309 +268,37 @@
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>db_change_stamp</td>
+                                            <td>orderID</td>
                                             <td>number</td>
-                                            <td>Every change in DB increases this value, you can use it as last update Timestamp <i class="label label-info label-small">Read-Only</i></td>
+                                            <td>The ID corresponding to the order which is being posted</td>
                                         </tr>
                                         <tr>
-                                            <td>id</td>
+                                            <td>sku</td>
+                                            <td>string</td>
+                                            <td>ID corresponding to the product</td>
+                                        </tr>
+                                        <tr>
+                                            <td>quantity</td>
                                             <td>number</td>
-                                            <td>ID specific to order <i class="label label-info label-small">Read-Only</i></td>
+                                            <td>Amount of units being ordered</td>
                                         </tr>
                                         <tr>
-                                            <td>closed</td>
-                                            <td>boolen</td>
-                                            <td>True when orderd is completed<i class="label label-info label-small">Read-Only</i></td>
+                                            <td>pricePerUnit</td>
+                                            <td>number</td>
+                                            <td>The price for the individual product</td>
                                         </tr>
                                         <tr>
-                                            <td>Time</td>
-                                            <td>DateTime</td>
-                                            <td>Order creation time</td>
-                                        </tr>
-                                        <tr>
-                                            <td>comment</td>
-                                            <td>string</td>
-                                            <td>Order comment</td>
-                                        </tr>
-                                        <tr>
-                                            <td>customer_id</td>
-                                            <td>Integer</td>
-                                            <td>Customers ID</td>
-                                        </tr>
-                                        <tr>
-                                            <td>deposit</td>
-                                            <td>Double</td>
-                                            <td>Total value of all deposits (payments) made</td>
-                                        </tr>
-                                        <tr>
-                                            <td>total</td>
-                                            <td>Double</td>
-                                            <td>Order total value</td>
-                                        </tr>
-                                        <tr>
-                                            <td>reference_number</td>
-                                            <td>string</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>shipping_charge_on_order</td>
-                                            <td>Double</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>shipping_address</td>
-                                            <td>array of strings</td>
-                                            <td>See list below for allowed attributes</td>
+                                            <td>priceTotal</td>
+                                            <td>number</td>
+                                            <td>Total price of the order (pricePerUnit * quantity)</td>
                                         </tr>
                                         </tbody>
                                     </table>
 
                                 </div>
 
-                                <p class=api-info-text>Shipping_address attributes</p>
-                                <table class="table table-bordered api-attributes-table">
-                                    <thead>
-                                    <tr>
-                                        <th>Attribute</th>
-                                        <th>Type</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>id</td>
-                                        <td>integer</td>
-                                        <td><i class="label label-info label-small">Read-Only</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>company</td>
-                                        <td>string</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>name</td>
-                                        <td>string</td>
-                                        <td>Full customer name<i class="label label-info label-small">mandatory</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>address</td>
-                                        <td>string</td>
-                                        <td><i class="label label-info label-small">mandatory</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>address2</td>
-                                        <td>string</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>city</td>
-                                        <td>string</td>
-                                        <td><i class="label label-info label-small">mandatory</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>zip</td>
-                                        <td>string</td>
-                                        <td><i class="label label-info label-small">mandatory</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>country</td>
-                                        <td>string</td>
-                                        <td><i class="label label-info label-small">mandatory</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>state</td>
-                                        <td>string</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>email_address</td>
-                                        <td>string</td>
-                                        <td><i class="label label-info label-small">mandatory</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>phone_number</td>
-                                        <td>string</td>
-                                        <td><i class="label label-info label-small">mandatory</i></td>
-                                    </tr>
-                                    <tr>
-                                        <td>fax_number</td>
-                                        <td>string</td>
-                                        <td></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
                             </div>
 
-                            <div id=view_order_list class=scroll-spy>
-                                <div class=api-content-main>
-                                    <h2>View Order List</h2>
-                                    <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                                    <p> This API helps you to view Orders. </p>
-                                    <div class=api-url>
-                                        <i class="label label-get label-large">get</i> <span class=icon-globe></span>
-                                        <h6> /orders </h6>
-                                    </div>
-                                    <div class=api-code-container>
-                                        <h6> Response </h6>
-                                        <div class="api-code-content expand-response-content">
-                                            <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-json">{
-        "current_page": 1,
-        "data": [
-            {
-                "db_change_stamp": 525015,
-                "id": 169,
-                "store_id": 0,
-                "closed": 0,
-                "time": "2017-10-02 13:59:37",
-                "comment": "fdsa",
-                "customer_id": 50,
-                "deposit": 30,
-                "total": 50,
-                "reference_number": "1234",
-                "shipping_charge_on_order": 0
-            },
-            {
-                "db_change_stamp": 525002,
-                "id": 168,
-                "store_id": 0,
-                "closed": 0,
-                "time": "2017-10-02 13:59:29",
-                "comment": "Test Transaction",
-                "customer_id": 262,
-                "deposit": 0,
-                "total": 100,
-                "reference_number": "Test",
-                "shipping_charge_on_order": 0
-            },
-            {
-                "db_change_stamp": 524982,
-                "id": 167,
-                "store_id": 0,
-                "closed": 0,
-                "time": "2017-10-02 13:59:27",
-                "comment": "Testy",
-                "customer_id": 257,
-                "deposit": 0,
-                "total": 100,
-                "reference_number": "123456",
-                "shipping_charge_on_order": 0
-            },
-            {
-                "db_change_stamp": 524971,
-                "id": 166,
-                "store_id": 0,
-                "closed": 0,
-                "time": "2017-10-02 13:53:35",
-                "comment": "Test Transaction",
-                "customer_id": 255,
-                "deposit": 0,
-                "total": 100,
-                "reference_number": "Test",
-                "shipping_charge_on_order": 0
-            },
-            {
-                "db_change_stamp": 524951,
-                "id": 165,
-                "store_id": 0,
-                "closed": 0,
-                "time": "2017-10-02 13:53:34",
-                "comment": "Testy",
-                "customer_id": 250,
-                "deposit": 0,
-                "total": 100,
-                "reference_number": "123456",
-                "shipping_charge_on_order": 0
-            }
-        ],
-        "from": 1,
-        "last_page": 6,
-        "next_page_url": "http://api.products.management.dev/api/orders?per_page=5&page=2",
-        "path": "http://api.products.management.dev/api/orders",
-        "per_page": 5,
-        "prev_page_url": null,
-        "to": 5,
-        "total": 28
-    }
-    </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="api-code-container api-sample api-code-curl">
-                                        <h6> Sample code | Curl </h6>
-                                        <div class=api-code-content>
-                                            <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X GET https://demo.api.products.management/api/orders?per_page=5&order_by=db_change_stamp:asc
-    </pre>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id=view_order class=scroll-spy>
-                                <div class=api-content-main>
-                                    <h2>View an Order</h2>
-                                    <!-- ------------------------------------------------------------------------------------------------------------------ -->
-                                    <p> This API helps you to view order. </p>
-                                    <div class=api-url>
-                                        <i class="label label-get label-large">get</i> <span class=icon-globe></span>
-                                        <h6> /orders/[id]</h6>
-                                    </div>
-                                    <div class=api-code-container>
-                                        <h6> Response </h6>
-                                        <div class="api-code-content expand-response-content">
-                                            <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-json">{
-        "db_change_stamp": 525015,
-        "store_id": 0,
-        "id": 169,
-        "closed": 0,
-        "time": "2017-10-02 13:59:37",
-        "type": 5,
-        "comment": "fdsa",
-        "customer_id": 50,
-        "ship_to_id": 0,
-        "deposit_override": 0,
-        "deposit": 30,
-        "tax": 0,
-        "total": 50,
-        "expiration_or_due_date": "2017-10-02 13:59:37",
-        "taxable": 1,
-        "reference_number": "1234",
-        "shipping_charge_on_order": 0,
-        "shipping_charge_override": 0,
-        "shipping_service_id": 0,
-        "shipping_tracking_number": " ",
-        "shipping_notes": " ",
-        "reason_code_id": 0,
-        "exchange_id": 0,
-        "channel_type": 0,
-        "default_discount_reason_code_i": 0,
-        "default_return_reason_code_id": 0,
-        "default_tax_change_reason_code": 0
-    }
-    </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="api-code-container api-sample api-code-curl">
-                                        <h6> Sample code | Curl </h6>
-                                        <div class=api-code-content>
-                                            <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X GET https://demo.api.products.management/api/orders/169
-    </pre>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div id=create_order class=scroll-spy>
                                 <div class=api-content-main>
@@ -1570,53 +307,15 @@
                                     <p> This API helps you to create new order. </p>
                                     <div class=api-url>
                                         <i class="label label-post label-large">post</i> <span class=icon-globe></span>
-                                        <h6> /orders</h6>
+                                        <h6> /api/orders</h6>
                                     </div>
                                     <div class=api-code-container>
                                         <h6> Response </h6>
                                         <div class="api-code-content expand-response-content">
                                             <div class=code-wrapper>
                                                                         <pre class="highlight prettyprint linenums lang-json">{
-      "comment": "fdsa",
-      "reference_number": "1234",
-      "customer_id": 50,
-      "shipping_charge_on_order": 20,
-      "products": [
-        {
-          "item_id": 11,
-          "quantity": 5,
-          "price": 10
-        },
-        {
-          "item_id": 12,
-          "quantity": 3,
-          "price": 100
-        }
-      ],
-      "deposits": [
-        {
-          "description": "PayPal",
-          "total": 10
-        },
-            {
-          "description": "Realex Payments",
-          "total": 20
-        }
-      ]
-      "shipping_address": {
-           "company": "S company",
-          "name": "S name",
-          "address": "S Address",
-          "address2": "S Address 2",
-          "city": "S City",
-          "zip": "S Address",
-          "country": "S country",
-          "state": "S state",
-          "email_address": "x@y.z",
-          "phone_number": "S Address",
-        "fax_number": "S Address",
-      }
-    }
+    "ok"
+}
     </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
                                             </div>
                                         </div>
@@ -1625,22 +324,18 @@
                                         <h6> Sample code | Curl </h6>
                                         <div class=api-code-content>
                                             <div class=code-wrapper>
-                                                                        <pre class="highlight prettyprint linenums lang-curl">
-    curl -H "Content-Type: application/json;"
-      -X POST -d '{
-        "comment": "fdsa",
-        "reference_number": "1234",
-        "customer_id": 50,
-        "shipping_charge_on_order": 20,
-        "products": [
-            {"item_id": 11, "quantity": 5, "price": 10},
-            {"item_id": 12, "quantity": 3, "price": 100}
-        ],
-        "deposits": [
-            {"description": "PayPal", "total": 10},
-            {"description": "Realex Payments", "total": 20}
-        ]
-    }' https://demo.api.products.management/api/customers
+                                                <pre class="highlight prettyprint linenums lang-curl">
+curl -X POST \
+http://api.products.management.coding.cab/api/products \
+-H 'Accept: application/json' \
+-H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI0NDcxOWU4ZmI2ZGEwZjY3OTA2MzUwOTFlMzNhYTYzYTUxNjY3ZjQ2MjYwN2E2NmUyNTQ4MjU3YjhjMTA0MDEwMDc2NDk3OGJjNTdiZTczIn0.eyJhdWQiOiI0IiwianRpIjoiMjQ0NzE5ZThmYjZkYTBmNjc5MDYzNTA5MWUzM2FhNjNhNTE2NjdmNDYyNjA3YTY2ZTI1NDgyNTdiOGMxMDQwMTAwNzY0OTc4YmM1N2JlNzMiLCJpYXQiOjE1NjEwMjA1MDAsIm5iZiI6MTU2MTAyMDUwMCwiZXhwIjoxNTkyNjQyOTAwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.vDAkKTusAsUMkYh3eQUuZs0FBA58gL2Y8pKxAZ_vVhEbD-h_zQX3YXRKC-DzsgRiP_dn7gb8ykaxbWqc3L2vd9R8EPu3lNZx4fWtrq3_LdDbwzFuED1CqZOoAsCjUBQNdJP5Wt7RAdnyzT9LV3wYF5AMzi321VZFA5Jh08DdE4fVk555JnNt5kwhbb5SRKm3PA5KooZPswWDxuTjGUnmY1_AEqjGFbcAZ-W75bJaFFEkVMOrQMxs4yhd3qdlFlWuAGVeosY4h1Vf_Wx9wkSnQM6i8hisiEpldBFmx63FMarxX7w09hVyGVZ0zaBFY0ZQEu8bMFm6h9ZG75vPLipDNTXiv0n8JeV0fZUMJ4LWHshcmEheErLW0tGFqDVYVGvU5QGqgMdBb80N-BeQ95MR-pNJTIPQ2zm06jvAsW6eZ-6rcAXp-6lzt943hMPIFGaBeQ3HiQttxJ-J5M6WdizQr76jJgHnO7CeL-T5mbfuJE2goGnW1WaMSM11aDRmzI3ylpnilweCXSNnn3EOJDQWK38_JFQaXyj8UM5eA7sTRxYdC0hzpUkmykBFh0fqSLW0JidC8PElpRgZX41nVAMy7yacn9WjQH7LxQE-csMrF5hJzinpig4IMraOyS6EltWUaSMGyzN0-asMn86MHhOnLWtyf3ocSK9AluemjufA-yA' \
+-d '{
+    "orderID": "001241",
+    "sku": "123456",
+    "quantity": 9,
+    "pricePerUnit": 78,
+    "priceTotal": 702
+}'
     </pre><a class=api-code-expand href="#">EXPAND &darr;</a>
                                             </div>
                                         </div>
@@ -1655,6 +350,7 @@
 
                         <!-- ------------------------------------ Order Section END ------------------------------------ -->
 
+
                         </div>
 
                     </div>
@@ -1665,9 +361,9 @@
         <div class="l-page fc copy-separator">
             <div class="fg-6 footer-bottom-link">
                 <ul class=clearfix>
-                    <li><a href="//StockManager.com/terms">TERMS OF SERVICE</a></li>
-                    <li><a href="//StockManager.com/privacy">PRIVACY POLICY</a></li>
-                    <li><a href="//StockManager.com/sitemap">SITEMAP</a></li>
+                    <li><a href="#">TERMS OF SERVICE</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">SITEMAP</a></li>
                 </ul>
             </div>
             <div class="fg-4 omega copy"> Copyright © Your IT Solutions Ltd. All Rights Reserved. </div>
