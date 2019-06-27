@@ -83,10 +83,6 @@
                                         <ol class=list-styled>
                                             <li>Send notifications about orders or products</li>
                                         </ol>
-                                        <h6 class="api-overview-heading small-head">Subscribe</h6>
-                                        <ol class=list-styled>
-                                            <li>Add subscribers to your organisations topic</li>
-                                        </ol>
                                         </p>
                                     </div>
                                 </div>
