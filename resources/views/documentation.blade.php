@@ -24,10 +24,10 @@
         <meta content='address=no' name=format-detection>
         <link href='favicon.ico' rel=icon type='image/x-icon'>
         <link href='favicon.ico' rel='shortcut icon' type='image/x-icon'>
-        <link href="https://products.management/css/documentation.css" media=all rel=stylesheet />
+        <link href="http://products.management/css/documentation.css" media=all rel=stylesheet />
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,900,700,300,100" media=screen rel=stylesheet />
 
-        <link rel="stylesheet" href="https://products.management/css/prettyfy.css" />
+        <link rel="stylesheet" href="http://products.management/css/prettyfy.css" />
     </head>
     <body>
     <!--[if lt IE 8]>
@@ -367,10 +367,10 @@ http://api.products.management.coding.cab/api/products \
         <i id=back-to-top></i>
     </footer>
 
-    <script src="https://products.management/js/head-b16c62e3.js"></script>
-    <script src="https://products.management/js/all-api-bb086d55.js"></script>
-    <script src="https://products.management/js/prettify.min.js"></script>
-    <script src="https://products.management/js/run_prettify.js"></script>
+    <script src="http://products.management/js/head-b16c62e3.js"></script>
+    <script src="http://products.management/js/all-api-bb086d55.js"></script>
+    <script src="http://products.management/js/prettify.min.js"></script>
+    <script src="http://products.management/js/run_prettify.js"></script>
 
     </body>
     </html>
